@@ -1,0 +1,9 @@
+# Qdrant in locale, raggiungibile solo da questo computer.
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.15.5
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6333:6333"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
